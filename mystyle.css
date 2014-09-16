@@ -12,8 +12,17 @@
 		li.green {
     text-decoration: line-through;
 		}
-		li.yellow { 
-			display:inline-block;
+		li:before {
+ 	 content:'[add icon symbol here]';
+  	font-family: [my cool web icon font here];
+  	display:inline-block;
+  	vertical-align: top;
+  	line-height: 1em;
+  	width: 1em;
+  	height:1em;
+  	margin-right: 0.3em;
+  	text-align: center;
+  	color: #999;
 		}
 	</style>
 </html>
