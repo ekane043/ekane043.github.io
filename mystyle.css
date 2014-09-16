@@ -9,7 +9,7 @@
 		.green {
 			background-color:lightgreen;
 		}
-		li#ab {
+		li.green {
     text-decoration: line-through;
 		}
 	</style>
