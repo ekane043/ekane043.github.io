@@ -12,5 +12,8 @@
 		li.green {
     text-decoration: line-through;
 		}
+		li.yellow { 
+			display:inline-block;
+		}
 	</style>
 </html>
