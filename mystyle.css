@@ -3,7 +3,7 @@
 		.blue{
 			background-color: lightblue;
 		}
-		.red{
+		.red,.blue{
 			background-color: red;
 		}
 		.green{
