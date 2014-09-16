@@ -2,12 +2,15 @@
 	<style>
 		 .yellow {
          background-color: yellow;
-      }
+      	}
 		.red {
 			background-color:red;
 		}
 		.green {
 			background-color:lightgreen;
+		}
+		li1 {
+    text-decoration: line-through;
 		}
 	</style>
 </html>
