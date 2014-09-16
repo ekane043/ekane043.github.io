@@ -12,7 +12,7 @@
 		li.green {
     text-decoration: line-through;
 		}
-		 li:before {
+		 li.yellow:before {
  	content: '✔';   
     margin-left: -1em; margin-right: .100em;
  		}
