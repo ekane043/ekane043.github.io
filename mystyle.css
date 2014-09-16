@@ -12,17 +12,16 @@
 		li.green {
     text-decoration: line-through;
 		}
-		li:before {
- 	 content:'[add icon symbol here]';
-  	font-family: [my cool web icon font here];
-  	display:inline-block;
-  	vertical-align: top;
-  	line-height: 1em;
-  	width: 1em;
-  	height:1em;
-  	margin-right: 0.3em;
-  	text-align: center;
-  	color: #999;
+		 li:before {
+ 	content: '✔';   
+    margin-left: -1em; margin-right: .100em;
+ 		}
+
+ 		ul {
+   	padding-left:20px;
+   	text-indent:2px;
+   	list-style: none;
+   	list-style-position:outside;
 		}
 	</style>
 </html>
