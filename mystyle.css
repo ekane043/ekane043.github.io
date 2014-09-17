@@ -1,5 +1,5 @@
 <html>
-	<style>
+	<head>
 		 .yellow {
          background-color: yellow;
       	}
@@ -23,5 +23,5 @@
    	list-style: none;
    	list-style-position:outside;
 		}
-	</style>
+	</head>
 </html>
