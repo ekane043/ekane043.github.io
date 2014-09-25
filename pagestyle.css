@@ -17,6 +17,7 @@
          }
          nav ul{
          	margin:0px;
+         	border: 10px blue;
          }
          nav li {
             display: inline;
