@@ -12,7 +12,7 @@
          nav {
              margin-top: 20px;
              margin-bottom: 0px;
-             background-color: solid blue;
+             background-color: solidblue;
          }
          nav li {
             display: inline;
@@ -30,8 +30,11 @@
          aside {
              float: left;
              width: 80%;
-             height: auto;
              background-color: tan;
+          	 padding: 25px;
+          	 border: 10px solid blue;
+         	 margin: 25px;
+             height: auto;
          }
          footer {
              clear: both;
