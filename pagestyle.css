@@ -23,12 +23,12 @@
            background-color: tan;
            padding: 25px;
            border: 10px solid blue;
-           height: auto;
+           height: 1400px;
            }
          aside {
              float: right;
              width: 73%;
-             height: auto;
+             height: 1400px;
              background-color: tan;
               border: 10px solid blue;
          }
