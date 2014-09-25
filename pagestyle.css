@@ -12,12 +12,12 @@
          nav {
           	 margin-top: 20px;
              margin-bottom: 0px;
-             border: 10px blue;
+             border-top: 10px blue;
+             border-bottom: 10px blue;
              background-color: tan;
          }
          nav ul{
          	margin:0px;
-         	border: 10px blue;
          }
          nav li {
             display: inline;
