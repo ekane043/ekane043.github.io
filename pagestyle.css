@@ -10,7 +10,9 @@
              background-color: tan;
          }
          nav {
-             padding: 10px solid blue;
+          	 margin-top: 20px;
+             margin-bottom: 0px;
+             padding: 10px blue;
              background-color: tan;
          }
          nav li {
