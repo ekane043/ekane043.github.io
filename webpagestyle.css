@@ -1,6 +1,5 @@
- <head>
-         <title>Elijahs Website</title>
-         <style>
+<head>
+     <style>
          header {
              position: fixed;
              top: 0px;
@@ -19,14 +18,14 @@
          section {
              float: left;
              width: 20%;
-             height: 90%;
+             height: 1400px;
              background-color: blue;
              color: white;
          }
          aside {
              float: left;
              width: 80%;
-             height: 90%px;
+             height: 1400px;
              background-color: red;
          }
          footer {
@@ -37,6 +36,6 @@
              background-color: black;
              margin: 0px;
          }
-         </style>
+     </style>
 
-     </head>
+</head>
