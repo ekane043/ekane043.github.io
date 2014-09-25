@@ -28,8 +28,9 @@
          aside {
              float: right;
              width: 70%;
-             height: 500px;
+             height: auto;
              background-color: tan;
+              border: 10px solid blue;
          }
          footer {
              clear: both;
