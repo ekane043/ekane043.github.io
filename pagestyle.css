@@ -12,7 +12,7 @@
          nav {
              margin-top: 20px;
              margin-bottom: 0px;
-             background-color: solidblue;
+             background-color: blue;
          }
          nav li {
             display: inline;
@@ -21,7 +21,9 @@
           float:left;
            width: 20%;
            background-color: tan;
-           border: 10px blue;
+           padding: 25px;
+           border: 10px solid blue;
+           margin: 25px;
            height: auto;
            }
          }
@@ -31,6 +33,7 @@
              background-color: tan;
           	 padding: 25px;
           	 border: 10px solid blue;
+             margin: 25px;
              height: auto;
          }
          footer {
