@@ -28,17 +28,12 @@
          }
          aside {
              float: left;
-             left: 35px
              width: 80%;
-             background-color: tan;
-          	 padding: 25px;
-          	 margin: 25px;
-          	 border: 10px blue;
-             height: auto;
+             height: 500px;
+             background-color: tanxxxxs;
          }
          footer {
              clear: both;
-             background-color: blue;
          }
          body {
              margin: 0px;
