@@ -19,14 +19,14 @@
          section {
              float: left;
              width: 20%;
-             height: 500px;
+             height: 90%;
              background-color: blue;
              color: white;
          }
          aside {
              float: left;
              width: 80%;
-             height: 500px;
+             height: 90%px;
              background-color: red;
          }
          footer {
