@@ -31,13 +31,17 @@
              width: 73.72%;
              height: 800px;
               border: 10px solid blue;
+            
          }
+         #a1 { 
+         	font-size: 24pts
          footer {
              clear: both;
          }
          body {
              margin: 0px;
          }
+         
      </style>
 </head>
 </html>
