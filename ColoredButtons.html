@@ -1,0 +1,30 @@
+<html>
+   <body>
+      <h1>Hello World!!</h1>
+      <button onclick="changeThisPageFunc();">Click Me!</button>
+      <main>
+         <h1>Hello Main</h2>
+         <p>The quick brown fox jumped over the lazy dog.</p>
+      </main>
+       <label for="abc"> Red</label>
+       <input id="abc" type="text" value=255>
+       <br>
+       <label for="xyz"> Green</label>
+       <input id="xyz" type="text" value=255>
+       <br>
+       <label for="efg"> Blue</label>
+       <input id="efg" type="text" value=255>
+       <br>
+       <button id=doit onclick="changeColor();">ChangeColor</button>
+      <script type="text/javascript">
+          changeColor=function(){
+              var red,green,blue:
+              red = document.querySelector("#abc");
+              green = document.querySelector("#xyz");
+              blue = document.querySelector("#efg");
+              newColor= "rgb("+ red.value + "," + green.value + "," + blue.value + ")";
+              document.body.style.backgroundColor = newColor;
+          }
+      </script>
+   </body>
+</html>
