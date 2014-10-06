@@ -27,31 +27,22 @@
 	<body>
 		<h1> ToDo List</h1>
 		<section>
-			<ul id="task">
-			<div>	
-				<input type="checkbox" value="Task"/>
-				<label>Task</label>
-			</div> 
-			<div>	
-				<input type="checkbox" value="Task"/>
-				<label>Task</label>
-			</div> 
-			<div>	
-				<input type="checkbox" value="Task"/>
-				<label>Task</label>
-			</div> 
-			</ul>
+			<ul id="task"></ul>
 		</section>
 		<add>
 			<label>Newtask</label>
-			<input type="text" size="36"></input>	
+			<input type="text" size="36" value="enter task"></input>	
 			<button onclick="addTask()">ADD</button>
 		</add>
 		<script type="text/javascript"></script>
 		<script>
 		addTask=function(){
-		a=document.querySelector("#addTask")
-		alert(a.value)
+			a=document.querySelector("#addTask")
+			bl= document.querySelector("#task")
+			li=document.createElement("li")
+			li=.innerHTML=i.value
+			bl.appendChild(li)
+		}
 		</script>
 		<footer>
 			<p>Copyright 2014 Elijah Kane</p>
