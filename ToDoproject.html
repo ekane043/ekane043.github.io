@@ -30,17 +30,17 @@
 			<ul id="busylist"></ul>
 		</section>
 		<add>
-			<label for="taskbox">New Task</label>
-			<input type="text" id="taskbox" size="36" value="enter task"></input>
+			<label for="newtask">New Task</label>
+			<input type="text" id="newtask" size="36" value="enter task">
 			<button onclick="addTask()">ADD</button>
 		</add>
 		<script type="text/javascript"></script>
 		<script>
 		addTask=function(){
-			i=document.querySelector("#taskbox")
+			i= document.querySelector("#newtask")
 			bl= document.querySelector("#busylist")
-			li=document.createElement("li")
-			cb=document.createElement("input")
+			li= document.createElement("li")
+			cb= document.createElement("input")
 			cb.type="checkbox"
 			t=document.createTextNode(i.value)
 			
