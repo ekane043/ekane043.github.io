@@ -1,0 +1,68 @@
+<html>
+	<header>
+		<style>
+			section {
+          float:left;
+           width: 20%;
+           border: 10px solid blue;
+           height: 100px;
+           overflow:scroll;
+           }
+           add {
+          float:left;
+          width:81%;
+          }
+			footer {
+            clear: both;
+            position:absolute;
+			bottom:0;
+			left:0;
+             
+         }
+         body {
+             margin: 0px;
+         }
+		</style>
+	</header>
+	<body>
+		<h1> ToDo List</h1>
+		<section>
+			<ul id="busylist"></ul>
+		</section>
+		<add>
+			<label for="newtask">New Task</label>
+			<input type="text" id="newtask" size="36" value="enter task">
+			<button onclick="addTask()">ADD</button>
+			
+		<select id="priority" onclick=changePriority>
+    		<option id=H >High</option>
+    		<option id=M >Medium</option>
+   			<option id=L >low</option>
+		</select>
+
+		</add>
+		<script type="text/javascript"></script>
+		<script>
+		addTask=function(){
+			i= document.querySelector("#newtask")
+			bl= document.querySelector("#busylist")
+			li= document.createElement("li")
+			cb= document.createElement("input")
+			cb.type="checkbox"
+			t=document.createTextNode(i.value)
+			li.appendChild(cb)
+			li.appendChild(t)
+			bl.appendChild(li)
+			
+		}
+		changePriority=function(){
+		
+		
+		}
+	
+		</script>
+		<footer>
+			<p>Copyright 2014 Elijah Kane</p>
+		</footer>	
+	</body>
+</html>
