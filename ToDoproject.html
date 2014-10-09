@@ -44,19 +44,24 @@
 			<input type="text" id="newtask" size="36" value="enter task">
 			<button onclick="addTask()">ADD</button>
 			
-		<select id="priority" onclick=priorityTask>
-    		<option id=H >High</option>
-    		<option id=M >Medium</option>
-   			<option id=L >low</option>
+		<select id="priority" onclick=changeColor>
+    		<option id=H color=red>High</option>
+    		<option id=M color=green>Medium</option>
+   			<option id=L color=blue>low</option>
 		</select>
 
 		</add>
 		<script type="text/javascript"></script>
 		<script>
 		
-		priorityTask= function(){
-		this.parentNode.className="priority"
-		}
+		changeColor = function() {
+           red = document.querySelector('#H').value;
+           green = document.querySelector('#M').value;
+           blue = document.querySelector('#L').value;
+           colorStr = "rgb("+red+","+green+","+blue+")";
+           document.body.style.backgroundColor = colorStr;
+       }
+       
 		doneTask= function(){
 			this.parentNode.className="done"
 		}
