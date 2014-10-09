@@ -2,7 +2,8 @@
 	<header>
 		<style>
 			section {
-          float:left;
+		   list-style-type: none;
+           float:left;
            width: 20%;
            border: 10px solid blue;
            height: 100px;
@@ -19,6 +20,12 @@
 			left:0;
              
          }
+         
+         .done {
+         text-decoration:line-through;
+         }
+         #priority {
+         }
          body {
              margin: 0px;
          }
@@ -34,7 +41,7 @@
 			<input type="text" id="newtask" size="36" value="enter task">
 			<button onclick="addTask()">ADD</button>
 			
-		<select id="priority" onclick=changePriority>
+		<select id="priority" onclick=priorityTask>
     		<option id=H >High</option>
     		<option id=M >Medium</option>
    			<option id=L >low</option>
@@ -43,6 +50,14 @@
 		</add>
 		<script type="text/javascript"></script>
 		<script>
+		
+		priorityTask= function(){
+		this.parentNode.className="priority"
+		}
+		doneTask= function(){
+			this.parentNode.className="done"
+		}
+	
 		addTask=function(){
 			i= document.querySelector("#newtask")
 			bl= document.querySelector("#busylist")
@@ -53,11 +68,8 @@
 			li.appendChild(cb)
 			li.appendChild(t)
 			bl.appendChild(li)
-			
-		}
-		changePriority=function(){
-		
-		
+			cb.onclick=doneTask;
+			li.onclick=priorityTask;
 		}
 	
 		</script>
@@ -66,3 +78,4 @@
 		</footer>	
 	</body>
 </html>
+
