@@ -81,41 +81,9 @@
 			}
 			localSave()
 		}
-		localSave= function()
-			res = []
-			var i;
-			allEntries = document.querySelectorAll('li')
-			for(i=0; i < allEntries.length; i++) {
-				if (! allEntries[i].classList.contains("done")){
-					res.push(allEntries[i].innerText);
-				}
-			}
-			console.log(res)
-			localStorage.setItem("ToDoDatabase",JSON.stringify(res))
-			}
-		restoreList = function() {
-			allEntries= JSON.parse(localStorage.getItem("ToDoDatabase"));
-			for(i=0; i<allEntries.length;i++){
-			newList.push(theList[i].innerText)
-			allEntries[i]= document.querySelector("#newtask")
-			allEntries[i]= document.querySelector("#busylist")
-			allEntries[i]= document.querySelector("#priority")
-			allEntries[i]= document.createElement("li")
-			allEntries[i]= document.createElement("input")
-			cb.type="checkbox"
-			t=document.createTextNode(i.value)
-			li.appendChild(cb)
-			li.appendChild(t)
-			bl.appendChild(li)
-			cb.onclick=doneTask;
-			p.onclick=priorityHTask;
-			p.onclick=priorityMTask;
-			p.onclick=priorityLTask;
-			}
-		}
 	
 		addTask=function(){
-			i= document.querySelector("#newtask")
+			li= document.querySelector("#newtask")
 			bl= document.querySelector("#busylist")
 			p= document.querySelector("#priority").value
 			li= document.createElement("li")
@@ -127,6 +95,7 @@
 			li.appendChild(t)
 			bl.appendChild(li)
 			cb.onclick=doneTask;
+			taskList.appendChild(t);
 			task.value="";
 			localSave()
 		}
