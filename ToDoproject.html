@@ -2,6 +2,7 @@
 	<header>
 		<style>
 			section {
+		   text-align: center
            float:left;
            width: 20%;
            border: 10px solid blue;
@@ -9,9 +10,10 @@
            overflow:scroll;
            }
            ul {
-            list-style-type: none;
-            }
+           list-style-type: none;
+           }
            add {
+          text-align: center
           float:left;
           width:81%;
           }
@@ -22,12 +24,10 @@
 			left:0;
              
          }
-         
          .done {
          text-decoration:line-through;
          }
-         .priority {
-         color:red;
+         #priority {
          }
          body {
              margin: 0px;
@@ -44,24 +44,61 @@
 			<input type="text" id="newtask" size="36" value="enter task">
 			<button onclick="addTask()">ADD</button>
 			
-		<select id="priority" onclick=changeColor>
-    		<option id=H color=red>High</option>
-    		<option id=M color=green>Medium</option>
-   			<option id=L color=blue>low</option>
+		<select id="priority" onclick=priorityTask>
+    		<option id=H >High</option>
+    		<option id=M >Medium</option>
+   			<option id=L >low</option>
 		</select>
 
 		</add>
 		<script type="text/javascript"></script>
 		<script>
-		
-       
+		priorityTask= function(){
+		this.parentNode.idName="priority"
+		}
 		doneTask= function(){
-			this.parentNode.className="done"
+		if (this.checked){
+			this.parentNode.classList.add("done");
+		} else {
+			this.parentNode.classList.remove("done");
+			}
+			localSave()
+		localSave= function()
+			res = []
+			var i;
+			allEntries = document.querySelectorAll('li')
+			for(i=0; i < allEntries.length; i++) {
+				if (allEntries[i].className !="done"){
+					res.push(allEntries[i].innerText);
+				}
+			}
+			console.log(res)
+			localStorage.setItem("ToDoDatabase",JSON.stringify(res))
+			}
+		restoreList = function() {
+			allEntries= JSON.parse(localStorage.getItem("ToDoDatabase"));
+			for(i=0; i<allEntries.length;i++){
+			newList.push(theList[i].innerText)
+			allEntries[i]= document.querySelector("#newtask")
+			allEntries[i]= document.querySelector("#busylist")
+			allEntries[i]= document.querySelector("#priority")
+			allEntries[i]= document.createElement("li")
+			allEntries[i]= document.createElement("input")
+			cb.type="checkbox"
+			t=document.createTextNode(i.value)
+			li.appendChild(cb)
+			li.appendChild(t)
+			bl.appendChild(li)
+			cb.onclick=doneTask;
+			p.onclick=priorityTask;
+			
+			}
 		}
 	
 		addTask=function(){
 			i= document.querySelector("#newtask")
 			bl= document.querySelector("#busylist")
+			p= document.querySelector("#priority")
 			li= document.createElement("li")
 			cb= document.createElement("input")
 			cb.type="checkbox"
@@ -70,7 +107,8 @@
 			li.appendChild(t)
 			bl.appendChild(li)
 			cb.onclick=doneTask;
-			li.onclick=priorityTask;
+			p.onclick=priorityTask;
+			localSave()
 		}
 	
 		</script>
@@ -79,4 +117,3 @@
 		</footer>	
 	</body>
 </html>
-
