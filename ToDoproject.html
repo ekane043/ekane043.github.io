@@ -4,7 +4,7 @@
 		h1 {
 		text-align: center;
 		}
-		section {
+		main {
 		   margin-left:auto;
 		   margin-right:auto;
            width: 66%;
@@ -15,7 +15,7 @@
          ul {
            list-style-type: none;
            }
-    	add {
+    	aside {
          width: 100%;
    		 margin-top: 50px;
     	 margin-left:auto;
@@ -46,15 +46,15 @@
 	
 	
 	<body>
-		<h1> ToDo List ass</h1>
-		<section>
+		<h1> ToDo List</h1>
+		<main>
 			<ul id="busylist"></ul>
-		</section>
-		<add>
+		</main>
+		<aside>
 			<label for="newtask">New Task</label>
 			<input type="text" id="newtask" size="36" value="enter task">
 			<button onclick="addTask()">ADD</button>
-		</add>
+		</aside>
 		<select id="priority">
     		<option>High</option>
     		<option>Medium</option>
