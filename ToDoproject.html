@@ -66,6 +66,8 @@
 		<script type="text/javascript">
 		
 		priorityValue= function(){
+		if (this.checked){
+			this.parentNode.classList.add("H")
 		
 		}
 		
@@ -82,7 +84,7 @@
 			bl= document.querySelector("#busylist")
 			p= document.querySelector("#priority").value
 			li= document.createElement("li")
-			li.className = priorityValue;
+			li.className =p;
 			cb= document.createElement("input")
 			cb.type="checkbox"
 			t=document.createTextNode(i.value)
@@ -90,7 +92,6 @@
 			li.appendChild(t)
 			bl.appendChild(li)
 			cb.onclick=doneTask;
-			taskList.appendChild(t);
 		}
 	
 		</script>
