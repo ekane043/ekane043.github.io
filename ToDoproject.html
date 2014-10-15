@@ -79,29 +79,12 @@
 			console.log(res)
 			localStorage.setItem("ToDoDatabase",JSON.stringify(res))
 			}
-		restoreList = function() {
-			allEntries= JSON.parse(localStorage.getItem("ToDoDatabase"));
-			for(i=0; i<allEntries.length;i++){
-			newList.push(theList[i].innerText)
-			i= document.querySelector("#newtask")
-			bl= document.querySelector("#busylist")
-			p= document.querySelector("#priority").value
-			taskText = task.value;
-			li= document.createElement("li")
-			li.className =p;
-			cb= document.createElement("input")
-			cb.type="checkbox"
-			t=document.createTextNode(i.value)
-			li.appendChild(cb)
-			t = document.createTextNode(taskText);
-			li.appendChild(t)
-			bl.appendChild(li)
-			cb.onclick=doneTask;
-			taskList.appendChild(li);
-			task.value="";
-			localSave()
-			}
-		}	
+	restoreTasks = function() {
+ 		allTasks = JSON.parse(localStorage.getItem('todoDatabase'))
+  		for(i = 0; i < allTasks.length; i++) {
+    	insertTaskInTree(allTasks[i],"Medium");
+		}
+	}	
 		addTask=function(){
 			i= document.querySelector("#newtask")
 			bl= document.querySelector("#busylist")
