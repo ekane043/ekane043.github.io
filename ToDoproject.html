@@ -67,7 +67,7 @@
 			this.parentNode.classList.remove("done");
 			}
 		}
-		localSave= function()
+		localSave= function(){
 			res = []
 			var i;
 			allEntries = document.querySelectorAll('li')
@@ -76,11 +76,13 @@
 					res.push(allEntries[i].innerText);
 				}
 			}
+			}
 			console.log(res)
 			localStorage.setItem("ToDoDatabase",JSON.stringify(res))
 			}
 	restoreTasks = function() {
  		allTasks = JSON.parse(localStorage.getItem('todoDatabase'))
+ 		taskList = document.querySelector("#busylist");
   		for(i = 0; i < allTasks.length; i++) {
     	insertTaskInTree(allTasks[i],"Medium");
 		}
@@ -90,6 +92,7 @@
 			bl= document.querySelector("#busylist")
 			p= document.querySelector("#priority").value
 			taskText = task.value;
+			//
 			li= document.createElement("li")
 			li.className =p;
 			cb= document.createElement("input")
@@ -101,6 +104,7 @@
 			bl.appendChild(li)
 			cb.onclick=doneTask;
 			taskList.appendChild(li);
+			//
 			task.value="";
 			localSave()
 		}
