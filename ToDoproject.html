@@ -74,8 +74,8 @@
 			for(i=0; i < allEntries.length; i++) {
 				if (! allEntries[i].classList.contains("done")){
 					res.push(allEntries[i].innerText);
-				}
 			}
+				}
 			}
 			console.log(res)
 			localStorage.setItem("ToDoDatabase",JSON.stringify(res))
@@ -91,15 +91,15 @@
 			i= document.querySelector("#newtask")
 			bl= document.querySelector("#busylist")
 			p= document.querySelector("#priority").value
-			taskText = task.value;
+			i = task.value;
 			//
 			li= document.createElement("li")
 			li.className =p;
 			cb= document.createElement("input")
 			cb.type="checkbox"
-			t=document.createTextNode(i.value)
+			t=document.createTextNode(task.value)
 			li.appendChild(cb)
-			t = document.createTextNode(taskText);
+			t = document.createTextNode(i);
 			li.appendChild(t)
 			bl.appendChild(li)
 			cb.onclick=doneTask;
