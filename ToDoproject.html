@@ -1,36 +1,43 @@
 <html>
 	<header>
 		<style>
-			section {
-		   text-align: center
-           float:left;
+		h1 {
+		text-align: center;
+		}
+		section {
+		   magrin-left:auto;
+		   magrin-right:auto;
            width: 20%;
            border: 10px solid blue;
            height: 100px;
            overflow:scroll;
            }
-           ul {
+         ul {
            list-style-type: none;
            }
-           add {
-          text-align: center
-          float:left;
+    	add {
           width:81%;
-          }
-			footer {
+          magrin-left:auto;
+		   magrin-right:auto;
+        }
+		footer {
             clear: both;
             position:absolute;
 			bottom:0;
 			left:0;
              
          }
-         .done {
+     	.done {
          text-decoration:line-through;
          }
-         #priority {
+     	.H {
+         color:green;
          }
-         body {
-             margin: 0px;
+    	 .M {
+         color: yellow;
+         }
+    	 .L {
+         color: red;
          }
 		</style>
 	</header>
@@ -44,15 +51,15 @@
 			<input type="text" id="newtask" size="36" value="enter task">
 			<button onclick="addTask()">ADD</button>
 			
-		<select id="priority" onclick=priorityTask>
-    		<option id=H >High</option>
-    		<option id=M >Medium</option>
-   			<option id=L >low</option>
+		<select id="priority">
+    		<option>High</option>
+    		<option>Medium</option>
+   			<option>low</option>
 		</select>
 
 		</add>
-		<script type="text/javascript"></script>
-		<script>
+		<script type="text/javascript">
+        window.onload = restoreTasks;
 		priorityTask= function(){
 		this.parentNode.idName="priority"
 		}
@@ -63,12 +70,13 @@
 			this.parentNode.classList.remove("done");
 			}
 			localSave()
+		}
 		localSave= function()
 			res = []
 			var i;
 			allEntries = document.querySelectorAll('li')
 			for(i=0; i < allEntries.length; i++) {
-				if (allEntries[i].className !="done"){
+				if (! allEntries[i].classList.contains("done")){
 					res.push(allEntries[i].innerText);
 				}
 			}
@@ -108,6 +116,7 @@
 			bl.appendChild(li)
 			cb.onclick=doneTask;
 			p.onclick=priorityTask;
+			task.value="";
 			localSave()
 		}
 	
