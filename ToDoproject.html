@@ -30,13 +30,13 @@
      	.done {
          text-decoration:line-through;
          }
-     	.H {
+     	.High {
          color:green;
          }
-    	 .M {
+    	 .Medium {
          color: yellow;
          }
-    	 .L {
+    	 .Low {
          color: red;
          }
 		</style>
@@ -67,7 +67,9 @@
 		
 		priorityValue= function(){
 		if (this.checked){
-			this.parentNode.classList.add("H")
+			this.parentNode.classList.add("High")
+			this.parentNode.classList.add("Medium")
+			this.parentNode.classList.add("Low")
 			}
 		}
 		doneTask= function(){
