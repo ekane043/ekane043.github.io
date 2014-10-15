@@ -83,20 +83,23 @@
 			allEntries= JSON.parse(localStorage.getItem("ToDoDatabase"));
 			for(i=0; i<allEntries.length;i++){
 			newList.push(theList[i].innerText)
-			allEntries[i]= document.querySelector("#newtask")
-			allEntries[i]= document.querySelector("#busylist")
-			allEntries[i]= document.querySelector("#priority")
-			allEntries[i]= document.createElement("li")
-			allEntries[i]= document.createElement("input")
+			i= document.querySelector("#newtask")
+			bl= document.querySelector("#busylist")
+			p= document.querySelector("#priority").value
+			taskText = task.value;
+			li= document.createElement("li")
+			li.className =p;
+			cb= document.createElement("input")
 			cb.type="checkbox"
 			t=document.createTextNode(i.value)
 			li.appendChild(cb)
+			t = document.createTextNode(taskText);
 			li.appendChild(t)
 			bl.appendChild(li)
 			cb.onclick=doneTask;
-			p.onclick=priorityHTask;
-			p.onclick=priorityMTask;
-			p.onclick=priorityLTask;
+			taskList.appendChild(li);
+			task.value="";
+			localSave()
 			}
 		}	
 		addTask=function(){
