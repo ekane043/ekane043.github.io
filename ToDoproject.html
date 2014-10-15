@@ -18,8 +18,8 @@
     	add {
           width:66%;
           margin-top: 50px;
-          margin-left:auto;
-		  margin-right:auto;
+         margin-left:auto;
+		 margin-right:auto;
         }
 		footer {
             clear: both;
@@ -61,9 +61,18 @@
 		</add>
 		<script type="text/javascript">
         window.onload = restoreTasks;
-		priorityTask= function(){
-		this.parentNode.idName="priority"
+		
+		priorityValue= function(){
+		if (this.checked){
+			this.parentNode.classList.add("H");
+			}
+			else if (this.checked){
+			this.parentNode.classList.add("M");
+			}
+			else if (this.checked){
+			this.parentNode.classList.add("L");
 		}
+		
 		doneTask= function(){
 		if (this.checked){
 			this.parentNode.classList.add("done");
@@ -99,16 +108,18 @@
 			li.appendChild(t)
 			bl.appendChild(li)
 			cb.onclick=doneTask;
-			p.onclick=priorityTask;
-			
+			p.onclick=priorityHTask;
+			p.onclick=priorityMTask;
+			p.onclick=priorityLTask;
 			}
 		}
 	
 		addTask=function(){
 			i= document.querySelector("#newtask")
 			bl= document.querySelector("#busylist")
-			p= document.querySelector("#priority")
+			p= document.querySelector("#priority").value
 			li= document.createElement("li")
+			newli.className = priorityValue;
 			cb= document.createElement("input")
 			cb.type="checkbox"
 			t=document.createTextNode(i.value)
@@ -116,7 +127,6 @@
 			li.appendChild(t)
 			bl.appendChild(li)
 			cb.onclick=doneTask;
-			p.onclick=priorityTask;
 			task.value="";
 			localSave()
 		}
