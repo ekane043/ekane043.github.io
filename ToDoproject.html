@@ -41,6 +41,10 @@
          }
 		</style>
 	</header>
+	
+	
+	
+	
 	<body>
 		<h1> ToDo List</h1>
 		<main>
@@ -67,24 +71,20 @@
 			this.parentNode.classList.remove("done");
 			}
 		}
-		
+	
 		addTask=function(){
 			i= document.querySelector("#newtask")
 			bl= document.querySelector("#busylist")
 			p= document.querySelector("#priority").value
-			taskText = task.value;
 			li= document.createElement("li")
 			li.className =p;
 			cb= document.createElement("input")
 			cb.type="checkbox"
 			t=document.createTextNode(i.value)
 			li.appendChild(cb)
-			t = document.createTextNode(taskText);
 			li.appendChild(t)
 			bl.appendChild(li)
 			cb.onclick=doneTask;
-			taskList.appendChild(li);
-			
 		}
 		</script>
 		<footer>
