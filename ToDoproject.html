@@ -86,6 +86,19 @@
   		for(i = 0; i < allTasks.length; i++) {
     	insertTaskInTree(allTasks[i],"Medium");
 		}
+	}
+		insertTaskInTree = function(taskText, priorityValue)  {
+    
+    bl = document.querySelector("#busylist");    
+    li = document.createElement('li');
+	li.className = priorityValue;
+    cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.onclick = doneTask;
+    t = document.createTextNode(taskText);
+    li.appendChild(newcb);
+    li.appendChild(t);
+    taskList.Child(newli);
 	}	
 		addTask=function(){
 			i= document.querySelector("#newtask")
@@ -103,7 +116,7 @@
 			li.appendChild(t)
 			bl.appendChild(li)
 			cb.onclick=doneTask;
-			taskList.appendChild(li);
+			bl.appendChild(li);
 			//
 			task.value="";
 			localSave()
