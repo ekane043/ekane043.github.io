@@ -67,50 +67,25 @@
 			this.parentNode.classList.remove("done");
 			}
 		}
-		localSave= function(){
-			var res = []
-			var i;
-			allEntries = document.querySelectorAll('li')
-			for(i=0; i < allEntries.length; i++) {
-				if (! allEntries[i].classList.contains("done")){
-					res.push(allEntries[i].innerText);
-			}
-				}
-			}
-			console.log(res)
-			localStorage.setItem("ToDoDatabase",JSON.stringify(res))
-			
-	restoreTasks = function() {
- 		allTasks = JSON.parse(localStorage.getItem('todoDatabase'))
- 		taskList = document.querySelector("#busylist");
-  		for(i = 0; i < allTasks.length; i++) {
-    	insertTaskInTree(allTasks[i],"Medium");
-		}
-	}
-		insertTaskInTree = function(taskText, priorityValue)  {
-    
-    bl = document.querySelector("#busylist");    
-    li = document.createElement('li');
-	li.className = priorityValue;
-    cb = document.createElement('input');
-    cb.type = 'checkbox';
-    cb.onclick = doneTask;
-    t = document.createTextNode(taskText);
-    li.appendChild(newcb);
-    li.appendChild(t);
-    taskList.Child(newli);
-	}	
+		
 		addTask=function(){
 			i= document.querySelector("#newtask")
 			bl= document.querySelector("#busylist")
 			p= document.querySelector("#priority").value
 			i = task.value;
-			insertTaskInTree(taskText,priorityValue);
-			task.value="";
 			//
-			localSave()
+			li= document.createElement("li")
+			li.className =p;
+			cb= document.createElement("input")
+			cb.type="checkbox"
+			t=document.createTextNode(task.value)
+			li.appendChild(cb)
+			t = document.createTextNode(i);
+			li.appendChild(t)
+			bl.appendChild(li)
+			cb.onclick=doneTask;
+			taskList.appendChild(li);
 		}
-		window.onload=restoreTasks;
 		</script>
 		<footer>
 			<p>Copyright 2014 Elijah Kane</p>
