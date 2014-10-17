@@ -105,20 +105,9 @@
 			bl= document.querySelector("#busylist")
 			p= document.querySelector("#priority").value
 			i = task.value;
-			//
-			li= document.createElement("li")
-			li.className =p;
-			cb= document.createElement("input")
-			cb.type="checkbox"
-			t=document.createTextNode(task.value)
-			li.appendChild(cb)
-			t = document.createTextNode(i);
-			li.appendChild(t)
-			bl.appendChild(li)
-			cb.onclick=doneTask;
-			bl.appendChild(li);
-			//
+			insertTaskInTree(taskText,priorityValue);
 			task.value="";
+			//
 			localSave()
 		}
 		window.onload=restoreTasks;
